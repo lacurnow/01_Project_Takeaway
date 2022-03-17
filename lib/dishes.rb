@@ -15,7 +15,7 @@ class Dishes
   def read_dish_list
     formatted_list_of_dishes = "Dishes to order:\n"
     @list_of_dishes.each {|dish|
-      formatted_list_of_dishes += "#{dish.name} : £#{dish.price.to_s}\n"
+      formatted_list_of_dishes += "#{dish.name} : £#{dish.price}\n"
     }
     return formatted_list_of_dishes
   end
