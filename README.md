@@ -68,5 +68,11 @@ class Receipt
   def produce_receipt
   # returns list of items and their prices, plus grand total
   end
+
+  private
+
+  def grand_total
+  # returns float representing grand total price of all ordered dishes
+  end
 end
 ```
