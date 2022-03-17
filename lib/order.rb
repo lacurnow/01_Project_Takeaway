@@ -12,7 +12,11 @@ class Order
     end
   end
 
-  def list_of_dishes
+  def list_of_dishes_on_order
     return @order_list
+  end
+
+  def remove_from_order(dish)
+    @order_list.delete(dish)
   end
 end
