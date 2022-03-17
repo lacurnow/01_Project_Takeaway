@@ -17,6 +17,7 @@ class Order
   end
 
   def remove_from_order(dish)
+    fail "This dish hasn't been ordered." if !@order_list.include?(dish)
     @order_list.delete(dish)
   end
 end
