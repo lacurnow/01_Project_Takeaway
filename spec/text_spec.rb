@@ -22,6 +22,6 @@ RSpec.describe Text do
     new_text = Text.new(time_dbl, client_dbl)
     time = new_text.delivery_time
     expect(client_dbl).to receive(:new).with(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
-    expect(client_dbl).to receive(:create, :message).and_return(ENV['TWILIO_PHONE_NUMBER'], ENV['TO_PHONE_NUMBER'])
+    expect(client_dbl).to receive_message_chain(:create, :messages).and_return(ENV['TWILIO_PHONE_NUMBER'], ENV['TO_PHONE_NUMBER'])
   end
 end
